@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian & Brayden Golf Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="start-screen" class="screen">
+            <h1>Brian & Brayden Golf</h1>
+            <button id="start-button">Start Game</button>
+        </div>
+        
+        <div id="character-select" class="screen hidden">
+            <h2>Select Your Character</h2>
+            <div class="character-options">
+                <div class="character" id="brian">
+                    <img src="assets/brian.png" alt="Brian">
+                    <h3>Brian</h3>
+                </div>
+                <div class="character" id="brayden">
+                    <img src="assets/brayden.png" alt="Brayden">
+                    <h3>Brayden</h3>
+                </div>
+            </div>
+        </div>
+        
+        <div id="game-screen" class="screen hidden">
+            <div id="game-info">
+                <div id="player-info">
+                    <img id="player-avatar" src="" alt="Player Avatar">
+                    <span id="player-name"></span>
+                </div>
+                <div id="score-info">
+                    <span>Hole: <span id="current-hole">1</span>/9</span>
+                    <span>Par: <span id="current-par">3</span></span>
+                    <span>Strokes: <span id="current-strokes">0</span></span>
+                    <span>Total: <span id="total-score">0</span></span>
+                </div>
+            </div>
+            <canvas id="game-canvas"></canvas>
+            <div id="power-meter-container">
+                <div id="power-meter">
+                    <div id="power-level"></div>
+                </div>
+                <button id="swing-button">Swing!</button>
+            </div>
+        </div>
+        
+        <div id="end-screen" class="screen hidden">
+            <h2>Game Complete!</h2>
+            <div id="final-score"></div>
+            <button id="play-again-button">Play Again</button>
+        </div>
+    </div>
+    
+    <script src="js/game.js"></script>
+</body>
+</html>
